@@ -1,9 +1,11 @@
 import {Entity, PrimaryGeneratedColumn, Column, OneToOne} from "typeorm";
 import {TestOne} from "./TestOne";
-import {BaseEntity} from "./base/BaseEntity";
 
 @Entity()
-export class User extends BaseEntity {
+export class User {
+
+    @PrimaryGeneratedColumn()
+    id: number;
 
     @Column({unique: true})
     firstName: string;

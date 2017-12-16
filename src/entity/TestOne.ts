@@ -1,9 +1,11 @@
 import {Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 import {User} from "./User";
-import {BaseEntity} from "./base/BaseEntity";
 
 @Entity()
-export class TestOne extends BaseEntity {
+export class TestOne {
+
+    @PrimaryGeneratedColumn()
+    id: number;
 
     // -----
     // Bugged relationship
